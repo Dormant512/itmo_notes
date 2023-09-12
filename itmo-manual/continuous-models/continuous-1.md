@@ -74,3 +74,21 @@ Solution:
 $$
 x(4) = 500\mathrm{e}^{4a} = 500(\mathrm{e}^{a})^4 = 500 (16^{1/3})^4 = 500 \cdot 16^{\frac{4}{3}} \approx 20159
 $$
+
+## Task 3
+
+$$
+(x+2y)\mathrm{d}x - x\mathrm{d}y = 0 \\
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{x + 2y}{x} \\
+\frac{\mathrm{d}y}{\mathrm{d}x} = 1 + 2\frac{y}{x} \\
+t = \frac{1}{x}
+$$
+
+
+
+## Task 4
+
+$$
+(x-y)\mathrm{d}x + (x+y) \mathrm{d}y = 0
+$$
+
