@@ -184,4 +184,75 @@ $$
 
 ### Task 1
 
+A population of protozoa develops with a constant relative growth rate of 0.7 per member per day. Initially, the population consist of two members. Find the population size after six days.
+
+Let $n$ be the population size, $t$ be time in days:
+$$
+\dot{n} = 0.7n \\
+\frac{\mathrm{d}n}{\mathrm{d}t} = 0.7n \\
+\frac{\mathrm{d}n}{n} = 0.7\mathrm{d}t \\
+\int\frac{\mathrm{d}n}{n} = 0.7 \int \mathrm{d}t \\
+\ln n = 0.7 t + C_0 \\
+n = C\mathrm{e}^{0.7t}
+$$
+Starting point:
+$$
+n(t=0) = C\mathrm{e}^{0} = C = 2 \\
+n = 2\mathrm{e}^{0.7t} \\
+n(t=6) = 2\mathrm{e}^{4.2} \approx 133.37
+$$
+Answer:
+$$
+n(t=6) = 2\mathrm{e}^{4.2} \approx 133.37
+$$
+
+
 ### Task 2
+
+Consider an insect population whose size $p$ is measured as biomass (mass of the population members) in kilograms. The population is increasing by $30\%$ per year. However, the population is also controlled by a natural predator population that destroys $6$ kg of insects per year.
+
+(a) Find the model describing the population size $p$ at any given time $t$;
+
+(b) Find the population size $4$ years after if the initial biomass is $15$ kg.
+$$
+\dot{p} = 0.3p - 6 \\
+\frac{\mathrm{d}p}{\mathrm{d}t} - 0.3p = -6
+$$
+Non-homogeneous ODE, consider homogeneous:
+$$
+\frac{\mathrm{d}p}{\mathrm{d}t} - 0.3p = 0 \\
+\frac{\mathrm{d}p}{\mathrm{d}t} = 0.3p \\
+\frac{\mathrm{d}p}{p} = 0.3\mathrm{d}t \\
+\int\frac{\mathrm{d}p}{p} = \int 0.3\mathrm{d}t \\
+\ln p = 0.3t + C_0 \\
+p = C\mathrm{e}^{0.3t}
+$$
+Return to the initial ODE with $p = \varphi(t)\mathrm{e}^{0.3t}$:
+$$
+(\varphi(t)\mathrm{e}^{0.3t})' = 0.3\varphi(t)\mathrm{e}^{0.3t} - 6 \\
+\varphi'(t)\mathrm{e}^{0.3t} + 0.3\varphi(t)\mathrm{e}^{0.3t} = 0.3\varphi(t)\mathrm{e}^{0.3t} - 6 \\
+\varphi'(t)\mathrm{e}^{0.3t} = -6 \\
+\varphi'(t) = -6\mathrm{e}^{-0.3t} \\
+\varphi(t) = -6\int\mathrm{e}^{-0.3t} \mathrm{d}t \\
+\varphi(t) = 20\mathrm{e}^{-0.3t} + C_1 \\
+$$
+Get back:
+$$
+p = \varphi(t)\mathrm{e}^{0.3t} = (20\mathrm{e}^{-0.3t} + C_1)\mathrm{e}^{0.3t} = 20 + C\mathrm{e}^{0.3t}
+$$
+Initial condition:
+$$
+p(t=0) = 20 + C\mathrm{e}^0 = 20 + C = 15 \\
+C = -5 \\
+p(t=4) = 20 - 5\mathrm{e}^{0.3\cdot 4} = 20 - 5\mathrm{e}^{1.2} \approx 3.4
+$$
+Answers:
+
+(a) General model:
+$$
+p = 20 + C\mathrm{e}^{0.3t}
+$$
+(b) The population size $4$ years after if the initial biomass is $15$ kg:
+$$
+p(t=4) = 20 - 5\mathrm{e}^{1.2} \approx 3.4
+$$
