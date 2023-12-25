@@ -13,13 +13,11 @@ The model used in this work is SEIRD (Susceptible, Exposed, Infectious, Recovere
 - $D$, Deceased - people who died during the outbreak.  
 
 The following system of differential equations described said model:
-$$
-\frac{\mathrm{d}S}{\mathrm{d}t} = -\beta \frac{SI}{N} \\
-\frac{\mathrm{d}E}{\mathrm{d}t} = \beta \frac{SI}{N} - \alpha E \\
-\frac{\mathrm{d}I}{\mathrm{d}t} = \alpha E - \gamma I - \mu I \\
-\frac{\mathrm{d}R}{\mathrm{d}t} = \gamma I \\
-\frac{\mathrm{d}D}{\mathrm{d}t} = \mu \frac{\mathrm{d}I}{\mathrm{d}t} \\
-$$
+$$\frac{\mathrm{d}S}{\mathrm{d}t} = -\beta \frac{SI}{N} $$
+$$\frac{\mathrm{d}E}{\mathrm{d}t} = \beta \frac{SI}{N} - \alpha E $$
+$$\frac{\mathrm{d}I}{\mathrm{d}t} = \alpha E - \gamma I - \mu I $$
+$$\frac{\mathrm{d}R}{\mathrm{d}t} = \gamma I $$
+$$\frac{\mathrm{d}D}{\mathrm{d}t} = \mu \frac{\mathrm{d}I}{\mathrm{d}t} $$
 where:
 
 - $t$ is time,
